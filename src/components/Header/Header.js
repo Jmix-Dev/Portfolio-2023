@@ -1,12 +1,16 @@
 import React from "react";
 import "./Header.css";
+import logo from "../../images/logo1.png";
 
 const Header = () => {
   return (
     <header className="header">
       <div className="header-inner">
         <div className="header-logo">
-          <a href="/">YourLogo</a>
+          <a href="/">
+            <img src={logo} alt="YourLogo" />{" "}
+            {/* Step 3: Replace the "YourLogo" text with an image element */}
+          </a>
         </div>
         <nav className="header-menu">
           <ul>

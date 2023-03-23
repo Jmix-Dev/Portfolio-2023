@@ -2,51 +2,54 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 1rem; 
-   background-color: #fff; 
+  padding: 2rem 1rem;
+  background-color: #fff;
   background: transparent;
-  
+  margin-top: -15px;
 }
 
 .header-inner {
   align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 1rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 1rem;
-    max-width: 1427px;
-
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  max-width: 1427px;
 }
 
 .header-logo {
   display: flex;
   align-items: center;
-  margin-right: 15rem; 
-  
+  margin-right: 15rem;
+}
+
+.header-logo img {
+  max-width: 80px;
+  max-height: 80px;
+  height: auto;
+  width: auto;
+  margin-top: -5px;
 }
 
 .header-logo a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: rgba(255,0,180);
+  color: rgba(255, 0, 180);
   text-decoration: none;
   text-transform: uppercase;
-
 }
 
 .header-logo a:hover {
   color: rgb(0, 255, 188);
-
 }
 
 .header-menu {
   display: flex;
   align-items: center;
-
 }
 
 .header-menu ul {
@@ -54,12 +57,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
 }
 
 .header-menu li {
   margin-left: 2rem;
-
 }
 
 .header-menu a {
@@ -70,13 +71,12 @@
   /* transition: color 0.3s ease; */
   text-transform: uppercase;
   padding: 0 10px;
-
 }
 
 a:after {
-  content:"";
+  content: "";
   position: absolute;
-  background-color: rgba(255,0,180);
+  background-color: rgba(255, 0, 180);
   height: 3px;
   bottom: -10px;
   width: 0;
@@ -85,8 +85,7 @@ a:after {
 }
 
 a:hover {
-    color: rgba(255,0,180);
-
+  color: rgba(255, 0, 180);
 }
 
 a:hover:after {
@@ -102,10 +101,8 @@ a:hover:after {
 @media screen and (max-width: 768px) {
   .header {
     padding: 1.5rem 1rem;
-
   }
   .header-menu li {
     margin-left: 1rem;
-
   }
 }
