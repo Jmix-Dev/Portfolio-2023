@@ -1,0 +1,80 @@
+.HeroVideo-inner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.Video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.HeroVideo-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  padding: 2rem;
+  color: white;
+}
+
+.HeroVideo-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.u-subheadline {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.u-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.u-underline::before {
+  content: "";
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 0.25rem;
+  background-color: white;
+}
+
+.text-base {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .HeroVideo-content h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+
+  .u-subheadline {
+    font-size: 2rem;
+  }
+
+  .text-base {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+}

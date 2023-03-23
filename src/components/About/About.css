@@ -1,0 +1,127 @@
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+
+.about-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  max-width: 1200px;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 800px;
+  margin-right: 1rem;
+}
+
+.about-text h1 {
+  font-size: 5rem;
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 255, 188);
+  animation-name: color-transition;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+ @keyframes color-transition {
+  0% {
+    text-decoration-color: rgb(0, 255, 188);
+  }
+  33% {
+    text-decoration-color: rgb(255, 0, 180);
+  }
+  66% {
+    text-decoration-color: rgb(196, 147, 255);
+  }
+  100% {
+    text-decoration-color: rgb(0, 255, 188);
+  }
+} 
+
+.about-text p:first-of-type {
+  /*   text-decoration: underline;
+  text-decoration-color: rgb(142,165,255); */
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.typewriter {
+  font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid orange;
+  letter-spacing: 0.1em; /* Adjust the letter-spacing to make it less clunky */
+  animation: typing 4s steps(25, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 11ch; /* Adjust the width to match the content width */
+  }
+}
+
+@keyframes blink-caret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+
+.about-text p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.about-image-container {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-top: -1rem; /* Add a negative margin to the top */
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: -50px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .about-text h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-text p {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-image-container {
+    width: 50%;
+    margin-top: 0;
+  }
+}
