@@ -1,46 +1,57 @@
-/* Flexbox container */
 .projects-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: center;
- /*  background-image: url("../../images/gradient4.jpg"); */
-  height: 100vh; 
+  height: auto; /* Change the height to auto */
+  padding: 2rem; /* Add padding for better spacing */
 }
 
-/* Grid for project cards */
+.project-cards-container {
+  overflow-y: auto;
+  max-height: 70vh;
+  padding: 1rem;
+  background-color: rgba(245, 245, 245, 0.1);
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.project-card:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr)); /* default for mobile */
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-gap: 1rem;
   max-width: 100%;
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  /* for tablets and larger screens */
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1024px) {
-  /* for desktops and larger screens */
   .project-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-/* Project card */
 .project-card {
-  border: 2px solid #333333; /* stone-900 */
+  border: 2px solid #333333;
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .project-card img {
   width: 100%;
-  height: 9rem; /* 36px for mobile, 48px for tablets and larger screens */
+  height: 9rem;
   object-fit: cover;
   cursor: pointer;
 }
@@ -50,9 +61,9 @@
 }
 
 .project-card h3 {
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #333333; /* stone-900 */
+  color: #333333;
   margin-bottom: 0.5rem;
 }
 
@@ -63,16 +74,16 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
 }
 
 .project-card span {
   display: inline-block;
   padding: 0.25rem 0.5rem;
   font-weight: 600;
-  border: 2px solid #333333; /* stone-900 */
+  border: 2px solid #333333;
   border-radius: 0.25rem;
-  color: #333333; /* stone-900 */
+  color: #333333;
 }
 
 .project-text--container {
@@ -82,6 +93,9 @@
   height: 70vh;
   padding: 2rem;
   padding-top: 4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .project-text--inner {
@@ -104,33 +118,25 @@
   text-decoration-color: orange;
 }
 
-
-.project-text--text p:first-of-type {
-  text-transform: uppercase;
+.project-text--text p {
   font-weight: 300;
 }
 
 .project-sub-title-typewriter {
   font-weight: 300;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 0.15em solid orange;
   letter-spacing: 2px;
-  animation: project-typing 8s steps(60, end) forwards, blink-caret 0.75s step-end infinite;
+  animation: fadeIn 5s ease-in;
 }
 
-@keyframes project-typing {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 78ch; /* Adjust the width to match the content width */
-  }
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 3s ease;
 }
 
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-text--text p {
@@ -146,7 +152,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin-top: 2rem;
-  margin-top: -1rem; /* Add a negative margin to the top */
+  margin-top: -1rem;
 }
 
 .project-text--image {
@@ -154,6 +160,17 @@
   height: 100%;
   object-fit: cover;
   margin-top: -50px;
+}
+
+.paragraph-container {
+  min-width: 85ch;
+}
+
+.paragraph-container > p {
+  font-style: italic;
+  /*  text-transform: lowercase; */
+  font-weight: 300;
+  line-height: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -177,4 +194,26 @@
     width: 50%;
     margin-top: 0;
   }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 3s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-slow {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 3s ease;
+}
+
+.fade-in-slow.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

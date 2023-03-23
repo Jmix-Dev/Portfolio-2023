@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Developer Portfolio",
+    "imgSrc": "./assets/portfolio-img2.jpg",
+    "technologies": ["React", "Tailwind", "Vite"]
+  },
+  {
+    "title": "Training Website",
+    "imgSrc": "./assets/deepdream-deadlift2.png",
+    "technologies": ["React", "TypeScript"]
+  },
+  {
+    "title": "Weather Website",
+    "imgSrc": "./assets/max-larochelle-uu-Jw5SunYI-unsplash.jpg",
+    "technologies": ["Java"]
+  }
+]
