@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import About from "./components/About/About";
 import Header from "./components/Header/Header";
-/* import Projects from "./components/Projects/Projects" */
+import Projects from "./components/Projects/Projects"
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       <div className="header-and-about-container">
         <Header />
         <About />
+        <Projects />
       </div>
-     {/* <Projects />  */}
     </div>
   );
 }

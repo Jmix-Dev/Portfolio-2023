@@ -2,8 +2,10 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+ /*  background-image: url("../../images/gradient4.jpg"); */
+  height: 100vh; 
 }
 
 /* Grid for project cards */
@@ -15,13 +17,15 @@
   margin: 0 auto;
 }
 
-@media (min-width: 768px) { /* for tablets and larger screens */
+@media (min-width: 768px) {
+  /* for tablets and larger screens */
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 1024px) { /* for desktops and larger screens */
+@media (min-width: 1024px) {
+  /* for desktops and larger screens */
   .project-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -69,4 +73,108 @@
   border: 2px solid #333333; /* stone-900 */
   border-radius: 0.25rem;
   color: #333333; /* stone-900 */
+}
+
+.project-text--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+
+.project-text--inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  max-width: 1200px;
+}
+
+.project-text--text {
+  flex: 1;
+  max-width: 800px;
+  margin-right: 1rem;
+}
+
+.project-text--text h1 {
+  font-size: 5rem;
+  text-decoration: underline;
+  text-decoration-color: orange;
+}
+
+
+.project-text--text p:first-of-type {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.project-sub-title-typewriter {
+  font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid orange;
+  letter-spacing: 2px;
+  animation: project-typing 8s steps(60, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes project-typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 78ch; /* Adjust the width to match the content width */
+  }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.project-text--text p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.project-text--image-container {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-top: -1rem; /* Add a negative margin to the top */
+}
+
+.project-text--image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: -50px;
+}
+
+@media screen and (min-width: 768px) {
+  .project-text--inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .project-text--text h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-text--text p {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-text--image-container {
+    width: 50%;
+    margin-top: 0;
+  }
 }
