@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import "./Projects.css";
 import projectsData from "../../data/projectData.json";
+import neonliteStar from "../../images/neonlite-star.png";
 
 const MyProjects = () => {
   const projects = projectsData;
@@ -35,6 +36,9 @@ const MyProjects = () => {
   return (
     <div className="projects-container">
       <div className="project-text--container">
+        <div className="project-text--image-container">
+          <img src={neonliteStar} alt="Profile" />
+        </div>
         <div className="project-text--inner">
           <h1 className="projects-section--title">Projects</h1>
           <p className="projects-section--title--text-base">
