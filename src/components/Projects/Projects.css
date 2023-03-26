@@ -1,8 +1,7 @@
 .projects-container {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -20,21 +19,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: calc(50% - 1rem);
-  padding: 0;
-  margin-bottom: 2rem; /* add margin-bottom to separate it from the project cards */
-  margin-right: 20rem; /* add margin-right to move it towards the left */
+  max-width: 100%;
+  margin-bottom: 1rem;
 }
 
-.project-cards-container {
-  margin-top: 2rem;
-  overflow-y: auto;
-  max-height: 100vh;
-  padding: 1rem;
-  background-color: rgba(245, 245, 245, 0.1);
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: -webkit-fill-available;
+.projects-section--title--text-base {
+  font-size: 1.125rem;
+  line-height: 28.5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -45,162 +36,49 @@
   }
 
   .project-text--container {
-    max-width: 100%; /* Set max-width to 100% to take up full width of container */
+    max-width: 800px;
+    margin-bottom: 2rem;
+    margin-right: 0;
+    text-align: center;
   }
 
   .project-cards-container {
     margin-top: 2rem;
     margin-left: 0;
-    max-height: none;
   }
-}
-
-.project-text--inner {
-  display: flex;
-  justify-content: center; /* center horizontally and vertically */
-  text-align: left;
-  width: 100%;
-  flex-direction: column; /* stack elements vertically */
 }
 
 .project-text--text {
-  flex: 1;
-  max-width: 800px;
-  margin-right: 1rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-@media screen and (min-width: 768px) {
-  .project-text--inner {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-}
-
-.project-text--text h1 {
+.projects-section--title {
   font-size: 5rem;
   text-decoration: underline;
   text-decoration-color: orange;
+  margin-bottom: 0.5rem;
 }
 
 .project-text--text p {
   font-weight: 300;
+  font-size: 1.25rem;
 }
 
-.project-sub-title-typewriter {
-  font-weight: 300;
-  letter-spacing: 2px;
-  animation: fadeIn 5s ease-in;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 3s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fade-in-slow {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 2s ease, transform 3s ease;
-}
-
-.fade-in-slow.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.project-text--image-container {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-top: 2rem;
-  margin-top: -1rem;
-}
-
-.project-text--image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin-top: -50px;
-}
-
-.paragraph-container {
-  min-width: 85ch;
-}
-
-.paragraph-container > p {
-  font-style: italic;
-  /* text-transform: lowercase; */
-  font-weight: 300;
-  line-height: 10px;
-}
-
-.project-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-evenly;
-}
-
-.project-card {
-  border: 2px solid #333333;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  width: calc(33.33% - 0.5rem); /* increase the width */
-  height: 250px; /* increase the height */
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .project-card {
-    width: calc(
-      33.33333% - 0.5rem
-    ); /* adjust width to fit three cards per row */
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .project-card {
-    width: calc(25% - 0.5rem); /* adjust width to fit four cards per row */
-  }
-}
-
-.project-card:hover {
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.project-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.project-card .project-details {
+.project-details {
   padding: 1rem;
 }
 
-.project-card h3 {
+.project-details h3 {
   font-size: 1.25rem;
   font-weight: 600;
   color: #333333;
   margin-bottom: 0.5rem;
 }
 
-.project-card p {
+.project-details p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -210,7 +88,7 @@
   font-size: 0.875rem;
 }
 
-.project-card span {
+.project-details span {
   display: inline-block;
   padding: 0.25rem 0.5rem;
   font-weight: 600;
@@ -219,38 +97,68 @@
   color: #333;
 }
 
-@media screen and (max-width: 767px) {
-  .projects-container {
-    flex-direction: column; /* Switch flex direction to stack items vertically /
-height: auto; / Remove fixed height /
-padding: 1rem; / Adjust padding to make it look better in smaller screens /
-align-items: center; / Center items horizontally */
-  }
+.project-grid {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
 
-  .project-text--container {
-    max-width: 100%; /* Set max width to 100% /
-margin-bottom: 2rem; / Add margin bottom to separate it from the project cards */
-  }
+.project-card {
+  border: 2px solid #333333;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
 
-  .project-text--image-container {
-    width: 100%;
-    max-width: 500px; /* Adjust max width to fit smaller screens */
-    height: auto;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-top: 2rem;
-    margin-top: -1rem;
+@media screen and (min-width: 768px) {
+  .project-card:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
   }
+}
 
-  .project-grid {
-    width: 100%; /* Set width to 100% to fill container /
-margin-top: 2rem; / Add margin top to separate it from the project text */
-  }
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
 
-  .project-card {
-    width: calc(
-      100% - 0.5rem
-    ); /* Adjust width to fit one card per row /
-height: 200px; / Adjust height to fit smaller screens */
-  }
+.project-details {
+  padding: 1rem;
+}
+
+.project-details h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.project-details p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.875rem;
+}
+
+.project-details span {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-weight: 600;
+  border: 2px solid #333333;
+  border-radius: 0.25rem;
+  color: #333;
 }

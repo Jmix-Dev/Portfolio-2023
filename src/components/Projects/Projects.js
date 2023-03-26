@@ -36,26 +36,11 @@ const MyProjects = () => {
     <div className="projects-container">
       <div className="project-text--container">
         <div className="project-text--inner">
-          <div className="project-text--text">
-            <h1>Projects</h1>
-          </div>
-          <div className="quote-container">
-            <div className="paragraph-container">
-              {sentences.map((sentence, index) => {
-                return (
-                  <p
-                    key={index}
-                    ref={ref}
-                    className={`${
-                      currentSentence > index ? "fade-in visible" : "fade-in"
-                    } paragraph`}
-                  >
-                    {sentence.trim()}
-                  </p>
-                );
-              })}
-            </div>
-          </div>
+          <h1 className="projects-section--title">Projects</h1>
+          <p className="projects-section--title--text-base">
+            These are some of the projects I have finished, had the opportunity
+            to partake in, or that I am working on.{" "}
+          </p>
         </div>
       </div>
       <div className="projects-cards-container">
