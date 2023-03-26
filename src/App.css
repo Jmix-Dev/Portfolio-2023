@@ -5,14 +5,24 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  
+  background-image: url("./images/gradient4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: rgba(255, 255, 255, 1);
 }
 
-.header-and-about-container {
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*  .header-and-about-container {
   background-image: url("./images/gradient4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-color: rgba(255, 255, 255, 1);
 
-}
+} */

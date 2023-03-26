@@ -38,6 +38,8 @@ const MyProjects = () => {
         <div className="project-text--inner">
           <div className="project-text--text">
             <h1>Projects</h1>
+          </div>
+          <div className="quote-container">
             <div className="paragraph-container">
               {sentences.map((sentence, index) => {
                 return (
@@ -53,15 +55,10 @@ const MyProjects = () => {
                 );
               })}
             </div>
-            <p className="text-base">
-              These are some of the projects I have completed, contributed to,
-              or am currently working on...
-            </p>
           </div>
-          <div className="project-text--image-container"></div>
         </div>
       </div>
-      <div className="project-cards-container">
+      <div className="projects-cards-container">
         <div className="project-grid">
           {projects.map((project, index) => (
             <div className="project-card" key={index}>
