@@ -10,7 +10,7 @@ function About() {
           <h1>Hi, I'm Joseph</h1>
           <p className="sub-title typewriter">Welcome!</p>
           <p className="text-base">
-            I am a Fullstack Developer, embarking on a new adventure! Check out
+            I am a Developer, embarking on a new adventure! Check out
             my website to learn more about me.{" "}
           </p>
         </div>
