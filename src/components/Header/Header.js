@@ -9,7 +9,6 @@ const Header = () => {
         <div className="header-logo">
           <a href="/">
             <img src={logo} alt="YourLogo" />{" "}
-            {/* Step 3: Replace the "YourLogo" text with an image element */}
           </a>
         </div>
         <nav className="header-menu">
