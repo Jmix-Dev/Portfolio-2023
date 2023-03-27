@@ -1,17 +1,27 @@
 [
   {
     "title": "Developer Portfolio",
-    "imgSrc": "/assets/projectImages/logo2.png",
+    "imgSrc": "/assets/projectImages/astro1.png",
     "technologies": ["React", "Tailwind", "Vite"]
   },
   {
-    "title": "Training Website",
-    "imgSrc": "/assets/projectImages/futuristic-deadlift1.png",
-    "technologies": ["React", "TypeScript"]
+    "title": "Movie Website",
+    "imgSrc": "/assets/projectImages/movie-image3.jpg",
+    "technologies": ["Java", "MongoDB", "React"]
   },
   {
-    "title": "Weather Website",
-    "imgSrc": "/assets/projectImages/portfolio-img2.jpg",
-    "technologies": ["Java"]
+    "title": "Google sheets Microservice",
+    "imgSrc": "/assets/projectImages/google-sheets.jpg",
+    "technologies": ["Java", "MongoDB", "React"]
+  },
+  {
+    "title": "Web Scraper",
+    "imgSrc": "/assets/projectImages/python.png",
+    "technologies": ["Python", "BeautifulSoup"]
+  },
+  {
+    "title": "Personal Training Website",
+    "imgSrc": "/assets/projectImages/futuristic-deadlift1.png",
+    "technologies": ["React", "Typescript", "In-Progress"]
   }
 ]

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSwipeable } from "react-swipeable";
 import { useInView } from "react-intersection-observer";
 import "./Projects.css";
 import projectsData from "../../data/projectData.json";
@@ -10,6 +11,24 @@ const MyProjects = () => {
   const [sentences, setSentences] = useState([]);
   const [currentSentence, setCurrentSentence] = useState(0);
   const [ref, inView] = useInView({ threshold: 0.5 });
+  const [visibleProjects, setVisibleProjects] = useState(0);
+
+  const handleNext = () => {
+    setVisibleProjects((prevVisibleProjects) =>
+      Math.min(prevVisibleProjects + 1, projects.length - 3)
+    );
+  };
+
+  const handlePrev = () => {
+    setVisibleProjects((prevVisibleProjects) =>
+      Math.max(prevVisibleProjects - 1, 0)
+    );
+  };
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext,
+    onSwipedRight: handlePrev,
+  });
 
   useEffect(() => {
     const quote1 = `"What lies behind us, and what lies before us,`;
@@ -43,26 +62,42 @@ const MyProjects = () => {
           <h1 className="projects-section--title">Projects</h1>
           <p className="projects-section--title--text-base">
             These are some of the projects I have finished, had the opportunity
-            to partake in, or that I am working on.{" "}
+            to partake in, or that I am working on.
           </p>
         </div>
       </div>
-      <div className="projects-cards-container">
-        <div className="project-grid">
-          {projects.map((project, index) => (
-            <div className="project-card" key={index}>
-              <img src={project.imgSrc} alt={project.title} />
-              <div className="project-details">
-                <h3>{project.title}</h3>
-                <p>
-                  {project.technologies.map((tech, i) => (
-                    <span key={i}>{tech}</span>
-                  ))}
-                </p>
+      <div className="project-navigation-container">
+        <button
+          className="navigation-button"
+          onClick={handlePrev}
+          disabled={visibleProjects === 0}
+        >
+          Prev
+        </button>
+        <div className="project-grid" {...swipeHandlers}>
+          {projects
+            .slice(visibleProjects, visibleProjects + 3)
+            .map((project, index) => (
+              <div className="project-card" key={index}>
+                <img src={project.imgSrc} alt={project.title} />
+                <div className="project-details">
+                  <h3>{project.title}</h3>
+                  <p>
+                    {project.technologies.map((tech, i) => (
+                      <span key={i}>{tech}</span>
+                    ))}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
+        <button
+          className="navigation-button"
+          onClick={handleNext}
+          disabled={visibleProjects === projects.length - 3}
+        >
+          Next
+        </button>
       </div>
     </div>
   );
