@@ -1,31 +1,31 @@
 [
   {
     "title": "Developer Portfolio",
-    "imgSrc": "/assets/projectImages/astro1.png",
+    "imgSrc": "/Portfolio-2023/assets/projectImages/astro1.png",
     "technologies": ["React", "Javascript", "DALL-E"],
     "githubLink": "https://github.com/Jmix-Dev/Portfolio-2023"
   },
   {
     "title": "Fullstack Movie Website",
-    "imgSrc": "/assets/projectImages/movie-image3.jpg",
+    "imgSrc": "/Portfolio-2023/assets/projectImages/movie-image3.jpg",
     "technologies": ["Java", "MongoDB", "React"],
     "githubLink": "https://github.com/Jmix-Dev/moviesproject-java-backend"
   },
   {
     "title": "Google Sheets Data Integration",
-    "imgSrc": "/assets/projectImages/google-sheets.jpg",
+    "imgSrc": "/Portfolio-2023/assets/projectImages/google-sheets.jpg",
     "technologies": ["Java", "Spring", "OAuth2", "Gradle", "Google Sheets AP"],
     "githubLink": "https://github.com/Jmix-Dev/Google-Sheets-To-API"
   },
   {
     "title": "Web Scraper",
-    "imgSrc": "/assets/projectImages/python.png",
+    "imgSrc": "/Portfolio-2023/assets/projectImages/python.png",
     "technologies": ["Python", "BeautifulSoup", "Requests"],
     "githubLink": "https://github.com/Jmix-Dev/Python-web-scraper"
   },
   {
     "title": "Personal Training Website",
-    "imgSrc": "/assets/projectImages/futuristic-deadlift1.png",
+    "imgSrc": "/Portfolio-2023/assets/projectImages/futuristic-deadlift1.png",
     "technologies": ["React", "Typescript", "In-Progress"]
   }
 ]
