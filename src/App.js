@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Projects from "./components/Projects/Projects";
 import QuoteSlider from "./components/QuoteSlider/QuoteSlider";
 import Timeline from "./components/Timeline/Timeline";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
       <Header />
       <div className="content">
         <About />
-   {/*      <QuoteSlider /> */}
+        {/*      <QuoteSlider /> */}
         <Projects />
         <Timeline />
+        <Contact />
       </div>
     </div>
   );

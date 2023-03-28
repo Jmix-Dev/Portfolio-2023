@@ -85,7 +85,9 @@
 
 .project-details {
   padding: 1rem;
-  min-height: 170px; /* Adjust this value based on the maximum number of technologies */
+  min-height: 180px; /* Adjust this value based on the maximum number of technologies */
+  max-height: 180px; /* Add this line to set a maximum height */
+  overflow-y: auto; /* Add this line to enable scrolling for overflowing content */
 }
 
 .project-details h3 {
@@ -145,6 +147,10 @@
   max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: minmax(
+    350px,
+    auto
+  ); /* Add this line to set a minimum height for the grid rows */
   gap: 1rem;
   justify-items: center;
   align-items: center;
@@ -156,10 +162,9 @@
   border-radius: 0.5rem;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -173,13 +178,19 @@
 
 .project-card img {
   width: 100%;
-  height: 100%;
+  height: 375px;
   object-fit: cover;
   cursor: pointer;
 }
 
 .project-details {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
+  min-height: 180px;
+  max-height: 180px;
+  overflow-y: auto;
+  justify-content: space-between; /* Add this line */
 }
 
 .project-details h3 {
@@ -187,6 +198,7 @@
   font-weight: 600;
   color: #333333;
   margin-bottom: 0.5rem;
+  margin: 0px;
 }
 
 .project-details p {
@@ -197,6 +209,8 @@
   align-items: center;
   justify-content: flex-start;
   font-size: 0.875rem;
+  margin-top: auto; /* Add this line */
+  margin-bottom: inherit;
 }
 
 .project-details span {
@@ -206,4 +220,23 @@
   border: 2px solid #333333;
   border-radius: 0.25rem;
   color: #333;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card a:hover img {
+  opacity: 0.8;
+  
+}
+
+.project-card:hover .project-title {
+  text-decoration: underline; /* add underline on hover */
+      text-decoration-color: rgb(255, 0, 180);
+
 }

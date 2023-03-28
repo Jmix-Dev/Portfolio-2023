@@ -2,22 +2,26 @@
   {
     "title": "Developer Portfolio",
     "imgSrc": "/assets/projectImages/astro1.png",
-    "technologies": ["React", "Tailwind", "Vite"]
+    "technologies": ["React", "Javascript", "DALL-E"],
+    "githubLink": "https://github.com/Jmix-Dev/Portfolio-2023"
   },
   {
-    "title": "Movie Website",
+    "title": "Fullstack Movie Website",
     "imgSrc": "/assets/projectImages/movie-image3.jpg",
-    "technologies": ["Java", "MongoDB", "React"]
+    "technologies": ["Java", "MongoDB", "React"],
+    "githubLink": "https://github.com/Jmix-Dev/moviesproject-java-backend"
   },
   {
-    "title": "Google sheets Microservice",
+    "title": "Google Sheets Data Integration",
     "imgSrc": "/assets/projectImages/google-sheets.jpg",
-    "technologies": ["Java", "MongoDB", "React"]
+    "technologies": ["Java", "Spring", "OAuth2", "Gradle", "Google Sheets AP"],
+    "githubLink": "https://github.com/Jmix-Dev/Google-Sheets-To-API"
   },
   {
     "title": "Web Scraper",
     "imgSrc": "/assets/projectImages/python.png",
-    "technologies": ["Python", "BeautifulSoup"]
+    "technologies": ["Python", "BeautifulSoup", "Requests"],
+    "githubLink": "https://github.com/Jmix-Dev/Python-web-scraper"
   },
   {
     "title": "Personal Training Website",

@@ -1,0 +1,70 @@
+[
+  {
+    "date": "Today",
+    "title": "Fullstack/Frontend Developer Internship",
+    "duration": "1 year",
+    "description": "As a fullstack/frontend developer, I work in an international and agile team responsible for the web application. My responsibilities include development, planning, and implementation of new functionality and design, as well as automated testing.",
+    "technologies": [
+      "React",
+      "Typescript",
+      "Javascript",
+      "HTML",
+      "CSS",
+      "REST API",
+      "Cypress",
+      "Jira",
+      "Git"
+    ],
+    "mentions": [
+      "Responsible for implementing a feature that allows the user to link their phone number to their account via an SMS verification service. It is now an essential system function that is both part of the registration process and unlocks key features and access for users.",
+      "Participated in an internal project to expand our film and TV database. Led a team of four people and established the framework for data registration and validation. The project involved data collection through manual collection. As part of the project, I developed a Java-based service that modified and transferred data to our Ruby/Rails API backend.  "
+    ]
+  },
+  {
+    "date": "Nov 2021 - Nov 2022",
+    "title": "Quality Assurance Tester",
+    "duration": "1 year",
+    "description": "As a quality assurance tester, I was responsible for ensuring the quality of mobile and web applications. The daily work included bug reporting, follow-up, and ensuring upcoming releases.",
+    "technologies": ["Figma", "Jira", "Slack", "Postman"],
+    "mentions": [
+      "Increased my responsibilities to perform product testing full-time and transitioned from a part-time to a full-time position within QA. Participated in 2 major annual launches and 7+ minor updates for both mobile and web applications. Responsible for structured communication between product owners and developers. Took on the role of QA lead at times."
+    ]
+  },
+  {
+    "date": "August 2021 - June 2023",
+    "title": "Java Developer",
+    "duration": "2 years",
+    "description": "I am currently studying to become a Java Developer at the IT University. Students in this education are trained to become Fullstack developers with a weight in backend. The emphasis is on backend development, with a focus on topics such as database development, web services, Java Frameworks, integrations, frontend and agile development.",
+    "technologies": [
+      "Java 11",
+      "SQL",
+      "Spring",
+      "Maven",
+      "Gradle",
+      "Vue",
+      "Javascript",
+      "HTML/CSS",
+      "Agile"
+    ]
+  },
+  {
+    "date": "August 2021 - June 2023",
+    "title": "Personal Trainer",
+    "duration": "4 years",
+    "description": "Specialized in working with clients and groups to deliver customized, high-quality training. Results-driven and solution-oriented approach to ensure that each client received the support and coaching they needed to reach their goals, whether they were new to fitness, had a history of injuries, or were at an elite level in their sport. The role required great communication skills, a sense for sales and working on a commission-based salary structure.",
+    "technologies": [
+      "Anatomy",
+      "Physiology",
+      "Nutrition",
+      "Injury Theory",
+      "Exercise Theory",
+      "Advanced Programming",
+      "Practical Training",
+      "Sales and Marketing"
+    ],
+    "mentions": [
+      "The first PT in Sweden to have the opportunity to test SATS' digital PT concept. Trained my colleagues on how to use the application.",
+      "Sold the most at my center during one of SATS' campaigns. A fun memory that showed sales ability, but above all my clients' trust in me regarding their goals and health."
+    ]
+  }
+]

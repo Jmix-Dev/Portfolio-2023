@@ -79,15 +79,35 @@ const MyProjects = () => {
             .slice(visibleProjects, visibleProjects + 3)
             .map((project, index) => (
               <div className="project-card" key={index}>
-                <img src={project.imgSrc} alt={project.title} />
-                <div className="project-details">
-                  <h3>{project.title}</h3>
-                  <p>
-                    {project.technologies.map((tech, i) => (
-                      <span key={i}>{tech}</span>
-                    ))}
-                  </p>
-                </div>
+                {project.githubLink ? (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={project.imgSrc} alt={project.title} />
+                    <div className="project-details">
+                      <h3 className="project-title">{project.title}</h3>
+                      <p className="project-tech">
+                        {project.technologies.map((tech, i) => (
+                          <span key={i}>{tech}</span>
+                        ))}
+                      </p>
+                    </div>
+                  </a>
+                ) : (
+                  <>
+                    <img src={project.imgSrc} alt={project.title} />
+                    <div className="project-details">
+                      <h3 className="project-title">{project.title}</h3>
+                      <p className="project-tech">
+                        {project.technologies.map((tech, i) => (
+                          <span key={i}>{tech}</span>
+                        ))}
+                      </p>
+                    </div>
+                  </>
+                )}
               </div>
             ))}
         </div>
