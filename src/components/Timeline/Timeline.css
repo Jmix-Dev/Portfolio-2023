@@ -11,7 +11,7 @@
   font-size: 3rem;
   font-weight: bold;
   text-decoration: underline;
-  text-decoration-color: white;
+  text-decoration-color: rgb(196, 147, 255);
   text-decoration-thickness: 4px;
 }
 
@@ -64,7 +64,7 @@
   font-size: 1.5rem;
   font-weight: 500;
   text-decoration: underline;
-  text-decoration-color: orange;
+  text-decoration-color: rgb(196, 147, 255)
 }
 
 .timeline-item-duration {

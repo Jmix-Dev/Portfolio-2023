@@ -74,7 +74,7 @@
 .projects-section--title {
   font-size: 5rem;
   text-decoration: underline;
-  text-decoration-color: orange;
+  text-decoration-color: rgba(255, 190, 101);
   margin-bottom: 0.5rem;
 }
 

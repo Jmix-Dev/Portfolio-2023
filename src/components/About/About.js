@@ -10,9 +10,10 @@ function About() {
           <h1>Hi, I'm Joseph</h1>
           <p className="sub-title typewriter">Welcome!</p>
           <p className="text-base">
-            As a Fullstack Developer, I thrive on challenges and growth. In my
-            free time, I enjoy weightlifting, crafting side projects, spending
-            time with loved ones, and exploring music production.{" "}
+            I am a Fullstack Developer who loves challenges and the growth that
+            comes with them. In my free time, I enjoy weightlifting, crafting
+            side projects, spending time with loved ones, and exploring music
+            production..{" "}
           </p>
         </div>
         <div className="about-image-container">
