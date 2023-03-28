@@ -92,6 +92,10 @@ a:hover:after {
   width: 100%;
 }
 
+.header-menu a {
+  cursor: pointer;
+}
+
 /* Media queries */
 @media screen and (max-width: 768px) {
   .header {

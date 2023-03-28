@@ -4,14 +4,15 @@ import astro from "../../images/astro1.png";
 
 function About() {
   return (
-    <div className="about-container">
+    <div id="about" className="about-container">
       <div className="about-inner">
         <div className="about-text">
           <h1>Hi, I'm Joseph</h1>
           <p className="sub-title typewriter">Welcome!</p>
           <p className="text-base">
-            I am a Developer, embarking on a new adventure! Check out
-            my website to learn more about me.{" "}
+            As a Fullstack Developer, I thrive on challenges and growth. In my
+            free time, I enjoy weightlifting, crafting side projects, spending
+            time with loved ones, and exploring music production.{" "}
           </p>
         </div>
         <div className="about-image-container">

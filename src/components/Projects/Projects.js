@@ -53,7 +53,7 @@ const MyProjects = () => {
   }, [inView]);
 
   return (
-    <div className="projects-container">
+    <div id="projects" className="projects-container">
       <div className="project-text--container">
         <div className="project-text--image-container">
           <img src={neonliteStar} alt="Profile" />

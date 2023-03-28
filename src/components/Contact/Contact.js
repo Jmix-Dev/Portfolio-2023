@@ -3,7 +3,7 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="contact-form-container">
+    <div id="contact" className="contact-form-container">
       <div className="form-wrapper">
         <form
           action="https://getform.io/f/0f1e5529-4b10-4267-9fae-5f5fe3d5fd28"
