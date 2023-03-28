@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Portfolio-2023/static/css/main.4db3f187.css",
+    "main.js": "/Portfolio-2023/static/js/main.b03c71a7.js",
+    "static/media/logo1.png": "/Portfolio-2023/static/media/logo1.9597e7a1993701500fb7.png",
+    "static/media/astro1.png": "/Portfolio-2023/static/media/astro1.5da1dbe169fe52bdd295.png",
+    "static/media/gradient4.jpg": "/Portfolio-2023/static/media/gradient4.d4b963f80a3acb457245.jpg",
+    "static/media/neonlite-star.png": "/Portfolio-2023/static/media/neonlite-star.671fe5fb64e74c593d80.png",
+    "index.html": "/Portfolio-2023/index.html",
+    "main.4db3f187.css.map": "/Portfolio-2023/static/css/main.4db3f187.css.map",
+    "main.b03c71a7.js.map": "/Portfolio-2023/static/js/main.b03c71a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4db3f187.css",
+    "static/js/main.b03c71a7.js"
+  ]
+}
