@@ -6,7 +6,7 @@ import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const Timeline = () => {
   const experience = TimelineData;
-  const [expandedItems, setExpandedItems] = useState([]);
+  const [expandedItems, setExpandedItems] = useState([0]);
 
   const toggleItem = (index) => {
     if (expandedItems.includes(index)) {
