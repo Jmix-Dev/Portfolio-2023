@@ -6,7 +6,7 @@ import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const Timeline = () => {
   const experience = TimelineData;
-  const [expandedItems, setExpandedItems] = useState([0]);
+  const [expandedItems, setExpandedItems] = useState([0]); // expanded first item by default
 
   const toggleItem = (index) => {
     if (expandedItems.includes(index)) {
@@ -19,18 +19,28 @@ const Timeline = () => {
   return (
     <div id="experience" className="timeline-container">
       <h1 className="timeline-heading">Timeline</h1>
+      <p className="timeline-instruction">
+        Click the arrows to expand/collapse the timeline items
+      </p>
       <div className="timeline">
         {experience.map((item, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-item-circle"></div>
-            <div className="timeline-item-content" oncl>
-              <div className="timeline-item-header">
+            <div className="timeline-item-content">
+              <div
+                className="timeline-item-header"
+                onClick={() => toggleItem(index)}
+              >
                 <span className="timeline-item-date">{item.date}</span>
                 <h3 className="timeline-item-title">{item.title}</h3>
                 <div className="timeline-item-duration">{item.duration}</div>
                 <button
-                  className="timeline-item-arrow-btn"
-                  onClick={() => toggleItem(index)}
+                  className={`timeline-item-arrow-btn${
+                    expandedItems.includes(index) ? " active" : ""
+                  }`}
+                  aria-label={`${
+                    expandedItems.includes(index) ? "Collapse" : "Expand"
+                  } timeline item`}
                 >
                   <div className="arrow-wrapper">
                     {expandedItems.includes(index) ? (
@@ -41,6 +51,9 @@ const Timeline = () => {
                         className="arrow-down"
                       />
                     )}
+                    <span className="tooltip">
+                      {expandedItems.includes(index) ? "Collapse" : "Expand"}
+                    </span>
                   </div>
                 </button>
               </div>
